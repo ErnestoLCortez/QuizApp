@@ -28,12 +28,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Yes"
-                android:onClick="onRadioButtonClicked"/>
+                android:onClick="question1False"/>
             <RadioButton android:id="@+id/question1_no"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="No"
-                android:onClick="onRadioButtonClicked"/>
+                android:onClick="question1True"/>
         </RadioGroup>
 
         <TextView
@@ -93,18 +93,22 @@
 
         <CheckBox
             style="@style/CheckBoxTextStyle"
+            android:id="@+id/checkbox1"
             android:text="a -> b"
              />
         <CheckBox
             style="@style/CheckBoxTextStyle"
+            android:id="@+id/checkbox2"
             android:text="a -> c"
             />
         <CheckBox
             style="@style/CheckBoxTextStyle"
+            android:id="@+id/checkbox3"
             android:text="c -> b"
             />
         <CheckBox
             style="@style/CheckBoxTextStyle"
+            android:id="@+id/checkbox4"
             android:text="b -> a"
             />
 
