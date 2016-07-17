@@ -11,32 +11,103 @@
         android:padding="16dp"
         android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/user_name"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textCapWords"
-            android:text="Name"/>
-
         <TextView
-            style="@style/QuestionTextStyle"
+            style="@style/QuestionHeaderStyle"
             android:text="Question 1"
             />
 
         <TextView
-            style="@style/QuestionTextStyle"
+        style="@style/QuestionTextStyle"
+            android:text="Can SQL be used as a general-purpose programming language?"/>
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton android:id="@+id/question1_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yes"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton android:id="@+id/question1_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No"
+                android:onClick="onRadioButtonClicked"/>
+        </RadioGroup>
+
+        <TextView
+            style="@style/QuestionHeaderStyle"
             android:text="Question 2"
             />
-
         <TextView
             style="@style/QuestionTextStyle"
+            android:text="What is another word for “table”?"/>
+
+        <EditText
+            android:id="@+id/question2_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textCapWords"
+             />
+
+        <TextView
+            style="@style/QuestionHeaderStyle"
             android:text="Question 3"
             />
-
         <TextView
             style="@style/QuestionTextStyle"
+            android:text="Is SQL a procedural language or a declarative language?"/>
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton android:id="@+id/question3_procedural"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Procedural"
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton android:id="@+id/question3_declarative"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Declarative"
+                android:onClick="onRadioButtonClicked"/>
+        </RadioGroup>
+
+        <TextView
+            style="@style/QuestionHeaderStyle"
             android:text="Question 4"
             />
+        <TextView
+            style="@style/QuestionTextStyle"
+            android:text="Which Functional Dependencies are satisfied by this table?"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/table"
+            android:paddingBottom="16dp"
+            android:layout_gravity="center_horizontal"/>
+
+
+        <CheckBox
+            style="@style/CheckBoxTextStyle"
+            android:text="a -> b"
+             />
+        <CheckBox
+            style="@style/CheckBoxTextStyle"
+            android:text="a -> c"
+            />
+        <CheckBox
+            style="@style/CheckBoxTextStyle"
+            android:text="c -> b"
+            />
+        <CheckBox
+            style="@style/CheckBoxTextStyle"
+            android:text="b -> a"
+            />
+
 
     </LinearLayout>
 </ScrollView>
