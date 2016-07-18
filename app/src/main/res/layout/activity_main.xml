@@ -8,110 +8,122 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="16dp">
 
         <TextView
             style="@style/QuestionHeaderStyle"
-            android:text="Question 1"
-            />
+            android:text="Question 1" />
 
         <TextView
-        style="@style/QuestionTextStyle"
-            android:text="Can SQL be used as a general-purpose programming language?"/>
+            style="@style/QuestionTextStyle"
+            android:text="Can SQL be used as a general-purpose programming language?" />
 
         <RadioGroup
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <RadioButton android:id="@+id/question1_yes"
+
+            <RadioButton
+                android:id="@+id/question1_yes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Yes"
-                android:onClick="question1False"/>
-            <RadioButton android:id="@+id/question1_no"
+                android:onClick="onRadioButtonClicked1"
+                android:text="Yes" />
+
+            <RadioButton
+                android:id="@+id/question1_no"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="No"
-                android:onClick="question1True"/>
+                android:onClick="onRadioButtonClicked1"
+                android:text="No" />
         </RadioGroup>
 
         <TextView
             style="@style/QuestionHeaderStyle"
-            android:text="Question 2"
-            />
+            android:text="Question 2" />
+
         <TextView
             style="@style/QuestionTextStyle"
-            android:text="What is another word for “table”?"/>
+            android:text="What is another word for “table”?" />
 
         <EditText
             android:id="@+id/question2_answer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textCapWords"
-             />
+            android:inputType="text" />
 
         <TextView
             style="@style/QuestionHeaderStyle"
-            android:text="Question 3"
-            />
+            android:text="Question 3" />
+
         <TextView
             style="@style/QuestionTextStyle"
-            android:text="Is SQL a procedural language or a declarative language?"/>
+            android:text="Is SQL a procedural language or a declarative language?" />
 
         <RadioGroup
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <RadioButton android:id="@+id/question3_procedural"
+
+            <RadioButton
+                android:id="@+id/question3_procedural"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Procedural"
-                android:onClick="onRadioButtonClicked"/>
-            <RadioButton android:id="@+id/question3_declarative"
+                android:onClick="onRadioButtonClicked3"
+                android:text="Procedural" />
+
+            <RadioButton
+                android:id="@+id/question3_declarative"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Declarative"
-                android:onClick="onRadioButtonClicked"/>
+                android:onClick="onRadioButtonClicked3"
+                android:text="Declarative" />
         </RadioGroup>
 
         <TextView
             style="@style/QuestionHeaderStyle"
-            android:text="Question 4"
-            />
+            android:text="Question 4" />
+
         <TextView
             style="@style/QuestionTextStyle"
-            android:text="Which Functional Dependencies are satisfied by this table?"/>
+            android:text="Which Functional Dependencies are satisfied by this table?" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/table"
+            android:layout_gravity="center_horizontal"
             android:paddingBottom="16dp"
-            android:layout_gravity="center_horizontal"/>
+            android:src="@drawable/table" />
 
 
         <CheckBox
-            style="@style/CheckBoxTextStyle"
             android:id="@+id/checkbox1"
-            android:text="a -> b"
-             />
-        <CheckBox
             style="@style/CheckBoxTextStyle"
-            android:id="@+id/checkbox2"
-            android:text="a -> c"
-            />
-        <CheckBox
-            style="@style/CheckBoxTextStyle"
-            android:id="@+id/checkbox3"
-            android:text="c -> b"
-            />
-        <CheckBox
-            style="@style/CheckBoxTextStyle"
-            android:id="@+id/checkbox4"
-            android:text="b -> a"
-            />
+            android:text="a -> b" />
 
+        <CheckBox
+            android:id="@+id/checkbox2"
+            style="@style/CheckBoxTextStyle"
+            android:text="a -> c" />
+
+        <CheckBox
+            android:id="@+id/checkbox3"
+            style="@style/CheckBoxTextStyle"
+            android:text="c -> b" />
+
+        <CheckBox
+            android:id="@+id/checkbox4"
+            style="@style/CheckBoxTextStyle"
+            android:text="b -> a" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:onClick="submitAnswers"
+            android:paddingTop="16dp"
+            android:text="Submit" />
 
     </LinearLayout>
 </ScrollView>
